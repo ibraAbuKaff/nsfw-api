@@ -12,7 +12,7 @@ class Image
 
     const MAX_IMAGE_SIZE = 5;//in Mega Byte or above MB
 
-    const MAX_NUMBER_OF_UPLOADED_IMAGES = 8;// number of uploaded
+    const MAX_NUMBER_OF_UPLOADED_IMAGES = 3;// number of uploaded
 
     const IMAGE_SIZE_UNITS_ARR      = ['B', 'kB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB', 'YB'];
     const IMAGE_SIZE_LARGE_UNIT_ARR = ['MB', 'GB', 'TB', 'PB', 'EB', 'ZB', 'YB'];
