@@ -18,7 +18,7 @@ $app->post('/api/detect-nsfw', function (Request $request, Response $response) {
 
     $images = $request->getUploadedFiles();
 
-    $result = (new \Src\Models\Image())->uploadAndCreate($images);
+    $result = (new \Src\Models\Image())->uploadAndDetect($images);
 
     return $response->withJson($result);
 

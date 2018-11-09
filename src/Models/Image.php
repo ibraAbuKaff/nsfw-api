@@ -27,7 +27,7 @@ class Image
      *
      * @author Ibraheem Abu Kaff
      */
-    public function uploadAndCreate(array $images): array
+    public function uploadAndDetect(array $images): array
     {
         if (empty(array_filter($images))) {
             $error = ['status' => 400, 'error' => 'empty images', 'img' => null];
@@ -50,7 +50,6 @@ class Image
 
             return $error;
         }
-
 
         $data = [];
         //loop through each file
