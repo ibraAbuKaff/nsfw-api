@@ -82,7 +82,7 @@ class Image
             $command = getenv('command');
             $command = sprintf($command, $fullPath);
 
-            $predication = shell_exec($command." 2>&1");
+            $predication = shell_exec($command . " 2>&1");
 
             preg_match_all('/(SFW|NSFW)\s*score\s*:\s*(.*)/i', $predication, $outputMatch);
 
@@ -100,6 +100,8 @@ class Image
                 ];
 
             }
+
+            unlink($fullPath);
         };
 
         return ['status' => 200, 'data' => $data];
