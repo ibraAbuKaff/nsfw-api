@@ -30,7 +30,7 @@ class Image
     public function uploadAndDetect(array $images): array
     {
         if (empty(array_filter($images))) {
-            $error = ['status' => 400, 'error' => 'empty images', 'img' => null];
+            $error = ['status' => 400, 'error' => 'empty images'];
 
             return $error;
         }
@@ -39,7 +39,7 @@ class Image
 
         if (count($listOfImages) > static::MAX_NUMBER_OF_UPLOADED_IMAGES) {
             //todo: throw exception
-            $error = ['status' => 400, 'error' => 'exceeded the maximum number of allowed images to upload', 'img' => null];
+            $error = ['status' => 400, 'error' => 'exceeded the maximum number of allowed images to upload'];
 
             return $error;
 
