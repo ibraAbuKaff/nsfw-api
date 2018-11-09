@@ -79,7 +79,10 @@ class Image
             //store the image locally
             $fullPath = $this->saveImageLocally($image);
 
-            $predication = shell_exec("python ../classify_nsfw.py -m ../data/open_nsfw-weights.npy -l tensorflow '$fullPath' 2>&1");
+            $command = getenv('command');
+            $command = sprintf($command, $fullPath);
+
+            $predication = shell_exec($command." 2>&1");
 
             preg_match_all('/(SFW|NSFW)\s*score\s*:\s*(.*)/i', $predication, $outputMatch);
 

@@ -26,5 +26,8 @@ require __DIR__ . '/../src/middleware.php';
 // Register routes
 require __DIR__ . '/../src/routes.php';
 
+$dotenv = new Dotenv\Dotenv(__DIR__."/../");
+$dotenv->load();
+
 // Run app
 $app->run();

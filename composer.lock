@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b71adfcb99a17346d6c0bb344bf93870",
+    "content-hash": "f1f347912b4c24df893efbf845b3d626",
     "packages": [
         {
             "name": "container-interop/container-interop",
@@ -493,6 +493,46 @@
             "time": "2016-10-10T12:19:37+00:00"
         },
         {
+            "name": "rogercreasy/slim-dot-env",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/RogerCreasy/SlimDotEnv.git",
+                "reference": "73217d072d4cccec14c524a4175168b99b86918b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/RogerCreasy/SlimDotEnv/zipball/73217d072d4cccec14c524a4175168b99b86918b",
+                "reference": "73217d072d4cccec14c524a4175168b99b86918b",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.9",
+                "vlucas/phpdotenv": "^2.4"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.8 || ^5.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "RogerCreasy\\SlimDotEnv\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Roger Creasy",
+                    "email": "roger@rogercreasy.com"
+                }
+            ],
+            "description": "Package to allow use of .env in a Slim Framework project",
+            "time": "2016-10-07T19:53:35+00:00"
+        },
+        {
             "name": "slim/php-view",
             "version": "2.2.0",
             "source": {
@@ -611,6 +651,56 @@
                 "router"
             ],
             "time": "2018-09-16T10:54:21+00:00"
+        },
+        {
+            "name": "vlucas/phpdotenv",
+            "version": "v2.5.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/vlucas/phpdotenv.git",
+                "reference": "8abb4f9aa89ddea9d52112c65bbe8d0125e2fa8e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/vlucas/phpdotenv/zipball/8abb4f9aa89ddea9d52112c65bbe8d0125e2fa8e",
+                "reference": "8abb4f9aa89ddea9d52112c65bbe8d0125e2fa8e",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.9"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.8.35 || ^5.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.5-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Dotenv\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Vance Lucas",
+                    "email": "vance@vancelucas.com",
+                    "homepage": "http://www.vancelucas.com"
+                }
+            ],
+            "description": "Loads environment variables from `.env` to `getenv()`, `$_ENV` and `$_SERVER` automagically.",
+            "keywords": [
+                "dotenv",
+                "env",
+                "environment"
+            ],
+            "time": "2018-07-29T20:33:41+00:00"
         }
     ],
     "packages-dev": [
@@ -2004,7 +2094,9 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "rogercreasy/slim-dot-env": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
