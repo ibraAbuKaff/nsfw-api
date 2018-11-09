@@ -135,8 +135,13 @@ class Image
              'uuid'      => uniqid(),
             ];
 
+        $dirPath = __DIR__ . "/../../imgs/";
+        if (!file_exists($dirPath)) {
+            mkdir($dirPath, 0755);
+        }
+
         $imageName = md5(json_encode($imageNameArr)) . '.' . explode('/', $image->getClientMediaType())[1];     //stored on the server
-        $path      = __DIR__ . "/../../imgs/" . $imageName;
+        $path      = $dirPath . $imageName;
         $image->moveTo($path);
 
         return $path;
