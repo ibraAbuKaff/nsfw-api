@@ -10,7 +10,7 @@ class Image
 {
     const ALLOWED_MIME_TYPE_ARR = ['image/jpeg', 'image/jpg'];
 
-    const MAX_IMAGE_SIZE = 5;//in Mega Byte or above MB
+    const MAX_IMAGE_SIZE = 3;//in Mega Byte or above MB
 
     const MAX_NUMBER_OF_UPLOADED_IMAGES = 3;// number of uploaded
 
