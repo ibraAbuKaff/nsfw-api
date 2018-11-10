@@ -29,24 +29,21 @@
             color: #719e40;
         }
 
-        ul {
-            list-style: none; /* Remove default bullets */
-        }
 
-        ul li::before {
-            content: "\2022"; /* Add content: \2022 is the CSS Code/unicode for a bullet */
-            color: red; /* Change the color */
-            font-weight: bold; /* If you want it to be bold */
-            display: inline-block; /* Needed to add space between the bullet and the text */
-            width: 1em; /* Also needed for space (tweak if needed) */
-            margin-left: -1em; /* Also needed for space (tweak if needed) */
-        }
 
     </style>
 </head>
 <body>
 
-<h2><span class="label label-default">NSFW API (Not suitable for work classifier)</span></h2>
+
+<div class="jumbotron">
+    <h1>Not suitable for work classifier</h1>
+    <h2><span class="label label-default">NSFW API</span></h2>
+    <p>
+        Detecting offensive / adult images is an important problem which researchers have tackled for decades. With the evolution of computer vision and deep learning the algorithms have matured and we are now able to classify an image as not suitable for work with greater precision.
+    </p>
+</div>
+
 
 <hr/>
 <h2><span class="label label-default">How to use it?</span></h2>
@@ -61,17 +58,34 @@
 </code>
 
 <hr/>
+
+<h2><div class="alert alert-info" role="alert">Rules</div></h2>
+
+<ul class="list-group">
+    <li class="list-group-item">
+        Maximum 3 Images Per Request
+    </li>
+
+    <li class="list-group-item">
+        Max image size is 3MB
+    </li>
+
+    <li class="list-group-item">
+        Currently, the api is processing JPEG|JPG images
+    </li>
+
+    <li class="list-group-item">
+        Currently, the api is processing JPEG|JPG images
+    </li>
+</ul>
+
+<hr/>
 <h2><span class="label label-default">Response<span></h2>
 <br/>
 <script src="https://gist.github.com/ibraAbuKaff/b0bb1d980b332e83264f1c98bff83f41.js"></script>
 
-<hr/>
-<h2>Rules</h2>
 
-<div class="alert alert-info" role="alert">Maximum 3 Images Per Request</div>
-<div class="alert alert-info" role="alert">Max image size is 3MB</div>
-<div class="alert alert-info" role="alert">Currently, the api is processing JPEG|JPG images</div>
-<div class="alert alert-info" role="alert">We delete your uploaded images after we run our classifier against them</div>
+
 
 
 
