@@ -15,5 +15,10 @@ return [
             'path'  => isset($_ENV['docker']) ? 'php://stdout' : __DIR__ . '/../logs/app.log',
             'level' => \Monolog\Logger::DEBUG,
         ],
+        // api rate limiter settings
+        'api_rate_limiter' => [
+            'requests' => '200',
+            'inmins' => '60',
+        ],
     ],
 ];
