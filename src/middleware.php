@@ -6,8 +6,8 @@
 
 $app->add(function ($request, $response, $next) {
 
-    $requests = 500; // maximum number of requests
-    $inmins   = 30;    // in how many time (minutes)
+    $requests = getenv('MAX_REQUEST'); // maximum number of requests
+    $inmins   = getenv('MAX_REQUEST_PER_MIN');    // in how many time (minutes)
 
     $APIRateLimit    = new \Src\Models\APIRateLimit($requests, $inmins);
     $mustbethrottled = $APIRateLimit();
