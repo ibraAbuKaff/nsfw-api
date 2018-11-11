@@ -27,8 +27,10 @@ class APIRateLimit
         $dbName   = getenv('MYSQL_DB_NAME');
         $userName = getenv('MYSQL_USERNAME');
         $password = getenv('MYSQL_PWD');
+        $host     = getenv('MYSQL_HOST');
+        $port     = getenv('MYSQL_PORT');
 
-        $this->pdo = new \PDO("mysql:host=127.0.0.1;port=3306;dbname=$dbName;charset=utf8", $userName, $password);
+        $this->pdo = new \PDO("mysql:host=$host;port=$port;dbname=$dbName;charset=utf8", $userName, $password);
 
         $this->requests = $requests;
         $this->inmins   = $inmins;
